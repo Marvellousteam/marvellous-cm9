@@ -1,0 +1,62 @@
+<b><#selectbg_g>dRoiDAce v3</#></b>
+
+Full Features List: 
+-Added default/custom in aroma
+-WORKING AC!D SOUND ENGINE!
+-NEW MMS APP WITH IPHONE BUBBLES
+-Jelly Bean Notification Drawer
+-Implemented more features in Aroma
+-Improved stability
+-better ram management
+-xperia lockscreen
+-Droid wallpapers v3. 
+-and lots of other things i don't remember
+
+V2.1 and previous
+-Updated Theme. (still modded with ICS Elements)
+-New Boot Animation. 
+-New USB Mount image. 
+-Replaced Smileys in Pattern with new png's. 
+-Added More wallpapers to Droid Wallpapers. 
+-Better Ram Management. (Only 65 MB Used)
+-112 MB Free. 
+-Real Player replaced with stock CM7 Music Player. 
+-FireKernel Updated. 
+-Added Roboto Font. 
+-Removed ICS Style Settings
+-Fixed Dialer Issue. 
++still updating changelog. 
+-Fix Home Button and Lockscreen Issue
+-Fixed Clock Issue. 
+-Fix Reboot on Google Accounts
+-Fix all other Google Related Services. 
+-Updated Play Store to 3.8.15. 
+-Updated Super User to latest one. 
+-Updated Real Player, now it looks soo good. 
+-Fixed some bugs in super user binary
+- Beats Audio + Alsa
+-Updated Base to Unofficial RC3
+-All Bugs fixed 
+-Aroma Installer
+-Fully Integrated Adrenaline Engine
+-Stock Samsung Sounds, with S3 Lock Sounds. 
+-Added Droid Wallpapers v2 (Even better walls)
+-Added Awesome boot animation 
+-Modded Xperia Theme heavily with some ICS Elements
+(Things like scroll bar, and emoticons)
+-Modded Xperia Home 
+(removed share app ability and more)
+-ICS Style Settings
+-GPS Fixed and Enhanced
+-Added BLN Support
+-Firekernel Updated
+-Init.d scripts modified
+-Build.prop done properly
+-Updater Script done properly
+-Removed Window Transparency
+-Increased PopUp Sensitivity
+-Fixed Lock Pattern Bug
+-Added Delivery Reports
+-Removed Window Transparency
+-Various Performance tweaks
++ many more

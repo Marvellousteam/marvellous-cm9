@@ -1,0 +1,190 @@
+﻿# Aroma-config
+
+ini_set("rom_name",             "marvellous-cm9");
+ini_set("rom_version",          "v0.0.0.0.0.1 - pre-alpha");
+ini_set("rom_author",           "Kevinjoa");
+ini_set("rom_device",           "HTC Wildfire S");
+ini_set("rom_date",             "July, 21th, 2014");
+
+ini_set("text_ok", "OK");
+ini_set("text_next", "Next >");
+ini_set("text_back", "< Back");
+ini_set("text_yes", "Yes");
+ini_set("text_no", "No");
+ini_set("text_about", "About");
+ini_set("text_quit", "Quit Installation");
+ini_set("text_quit_msg", "Really Quit the installation?");
+
+splash(5000, "splash");
+
+fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
+
+theme("ics");
+
+viewbox(
+	"Marvellous CM 9 ",
+	"\n\n\n\n\n\n\n\n\n\n"+
+	"<#0000ff>Welcome!</#>\n\n\n\n"+
+	"You are about to flash Marvellous CM 9 rom.\n\n"+
+	"<b>Build: v0.0.0.0.0.1 -pre-alpha</b>\n"+
+	"<b>Date: July, 21th, 2014</b>\n\n"+
+	"Please click next to go on."+
+	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
+	"by Kevinjoa",
+	"icons/sensian"
+);
+	
+agreebox(
+	"Infos",
+	"Please read the informations before flashing:",
+	"icons/alert",
+	readfile_aroma("informations.txt"),
+	"I've read the information.",
+	"Please read the informations before flashing!"
+);
+
+selectbox(
+  "GPS Configuration",
+  "Select your country from the list below",
+  "@customize",
+  "gps.prop",
+
+  "Installs the right gps.conf file for your country to increase gps accuracy & lock-speed\n","",2,#--selected.1
+
+  "Angola","",0,
+  "Argentina","",0,
+  "Australia","",0,
+  "Austria","",0,
+  "Bangladesh","",0,
+  "Belarus","",0,
+  "Belgium","",0,
+  "Bosnia & Herzegovina","",0,
+  "Brazil","",0,
+  "Bulgaria","",0,
+  "Cambodia","",0,
+  "Canada","",0,
+  "Chile","",0,
+  "China","",0,
+  "Costa-Rica","",0,
+  "Croatia","",0,
+  "Czech Republic","",0,
+  "Denmark","",0,
+  "El Salvador","",0,
+  "Estonia","",0,
+  "Finland","",0,
+  "France","",0,
+  "Germany","",0,
+  "Greece","",0,
+  "Guatemala","",0,
+  "Hong-Kong","",0,
+  "Hungary","",0,
+  "India","",0,
+  "Indonesia","",0,
+  "Iran","",0,
+  "Ireland","",0,
+  "Israel","",0,
+  "Italy","",0,
+  "Japan","",0,
+  "Korea","",0,
+  "Kyrgyzstan","",0,
+  "Latvia","",0,
+  "Lithuania","",0,
+  "Luxembourg","",0,
+  "Macedonia","",0,
+  "Madagascar","",0,
+  "Malaysia","",0,
+  "Mexico","",0,
+  "Moldova","",0,
+  "Netherlands","",0,
+  "New Caledonia","",0,
+  "New Zealand","",0,
+  "Norway","",0,
+  "Oman","",0,
+  "Pakistan","",0,
+  "Panama","",0,
+  "Philippines","",0,
+  "Poland","",0,
+  "Portugal","",0,
+  "Qatar","",0,
+  "Republic of Serbia","",0,
+  "Romania","",0,
+  "Russian Federation","",0,
+  "Saudi Arabia","",0,
+  "Singapore","",0,
+  "Slovakia","",0,
+  "Slovenia","",0,
+  "South Africa","",0,
+  "Spain","",0,
+  "Sri Lanka","",0,
+  "Sweden","",0,
+  "Switzerland","",0,
+  "Taiwan","",0,
+  "Tanzania","",0,
+  "Thailand","",0,
+  "Turkey","",0,
+  "Ukraine","",0,
+  "United Arab Emirates","",0,
+  "United Kingdom","",0,
+  "United States of America","",0,
+  "Uzbekistan","",0,
+  "Venezuela","",0,
+  "Vietnam","",0,
+  "Yugoslavia","",0,
+
+"Continents","Use your continent file if your country isn't on the list",2,
+
+  "Africa","",0,
+  "Asia","",0,
+  "Europe","",0,
+  "North America","",0,
+  "Oceania","",0,
+  "South America","",0
+); 
+
+selectbox(
+   "Memory twekas",
+   "Which tweak do you want to use ?",
+   "icons/apps",
+   "memory.prop",
+   "Link2sd.",                      "Link2sd: Must be activated in system to work",                                    0,
+   "Int2ext+",                      "A background Script like Data2sd, fast but needs some space ",                    0,
+   "Int2ext",                       "Just like Data2sd",                                                               0,
+   "None",                          "You don't want to have any of those tweaks, than click this.",                    1
+);   
+     
+   
+   
+ini_set("text_next", "Install!");
+ini_set("text_back", "Check");
+
+viewbox(
+	"<#ff0000>Last Warning!</#>",
+	"\n\n\n\n\n"+
+	"by pressing install rom will be installed.\n\n\n"+
+	"To quit, please press Search-Key\n"+
+	"and choose quit installation.\n\n"+
+	"If you want to check your settings please press\n"+
+	"please check.",
+	"icons/alert"
+);
+
+ini_set("text_next", "OK");
+
+install(
+	"Installing...",
+	"Marvellous CM9 Rom will be installed now.\n"+
+	"Please wait until the rom installation is finished.",
+	"icons/install"
+);
+
+ini_set("text_next", "Quit!");
+ini_set("text_back", "< Back");
+
+viewbox(
+	"It's DONE !!",
+	"\n\n\n\n\n\n\n"+
+	"The Marvellous Marvellous CM9-ROM is sucssesfully flashed.\n\n"+
+	"First boot can take a while ,so please wait.\n\n"+
+	"Enjoy your customized phone!",
+	"icons/install"
+);
