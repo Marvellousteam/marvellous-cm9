@@ -1,7 +1,7 @@
 ﻿# Aroma-config
 
 ini_set("rom_name",             "marvellous-cm9");
-ini_set("rom_version",          "v0.0.0.0.0.1 - pre-alpha");
+ini_set("rom_version",          "v0.1 - alpha");
 ini_set("rom_author",           "Kevinjoa");
 ini_set("rom_device",           "HTC Wildfire S");
 ini_set("rom_date",             "July, 21th, 2014");
@@ -26,7 +26,7 @@ viewbox(
 	"\n\n\n\n\n\n\n\n\n\n"+
 	"<#0000ff>Welcome!</#>\n\n\n\n"+
 	"You are about to flash Marvellous CM 9 rom.\n\n"+
-	"<b>Build: v0.0.0.0.0.1 -pre-alpha</b>\n"+
+	"<b>Build: v0.1 -alpha</b>\n"+
 	"<b>Date: July, 21th, 2014</b>\n\n"+
 	"Please click next to go on."+
 	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
