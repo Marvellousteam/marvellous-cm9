@@ -1,0 +1,4 @@
+post-build=cyanogenmod/htc_marvel/marvel:4.0.4/OlivierOlivier-20140720/0.1:user/release-keys
+post-timestamp=1405864516
+pre-bootloader=*
+pre-device=marvel
