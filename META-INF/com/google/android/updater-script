@@ -4,11 +4,11 @@ ui_print("--------------------------------");
 assert(getprop("ro.product.device") == "marvel" || getprop("ro.build.product") == "marvel");
 
 set_progress(0.05);
-ui_print("Let's format system");
+ui_print("- Let's format system...");
 format("MTD", "system");
-ui_print("Now mount the system");
+ui_print("- Now mount the system...");
 mount("MTD", "system", "/system");
-ui_print("It's time to extract System essential things");
+ui_print("- It's time to extract System essential things...");
 package_extract_dir("system", "/system");
 set_progress(0.7);
 ui_print("Let us do some symlink stuff");
@@ -885,7 +885,22 @@ ui_print("Copying gps.conf...");
 package_extract_dir("gpsconf/1.CONTINENTS/South-America/system", "/system");
 ui_print("gps.conf file updated, the gps is now more accurate and locks faster...");
 endif;
-set_progress(0.8);
+set_progress(0.75);
+
+#GApps
+if
+		file_getprop("/tmp/aroma-data/gapps.prop","selected.0") == "1"
+	then
+	ui_print("- Flashing  minimal GApps package...");
+		package_extract_dir("gapps/system", "/system");
+	endif;
+	
+if
+		file_getprop("/tmp/aroma-data/gapps.prop","selected.0") == "2"
+	then
+	ui_print("- You haven't choosen minimal GApps package, doing nothing...");
+	endif;
+
 #Memory extansion
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "1"
@@ -916,7 +931,6 @@ if
 set_progress(0.85);
 ui_print("Setting permissions");
 set_perm_recursive(0, 0, 0755, 0644, "/system");
-set_perm_recursive(0, 0, 0755, 0755, "/system/addon.d");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
 set_perm(0, 3003, 02750, "/system/bin/netcfg");
 set_perm(0, 3004, 02755, "/system/bin/ping");

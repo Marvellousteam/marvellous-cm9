@@ -142,6 +142,15 @@ selectbox(
 ); 
 
 selectbox(
+   "GApps",
+   "Do you want to have minimalistic GApps ?",
+   "icons/apps",
+   "gapps.prop",
+   "Yes.",                          "I want to install minimastic gapps package with this rom",                        1,
+   "No.",                            "I don't want use minimalistic gapps package with this rom ",                      0
+);  
+
+selectbox(
    "Memory twekas",
    "Which tweak do you want to use ?",
    "icons/apps",
