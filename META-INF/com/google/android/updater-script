@@ -8,7 +8,7 @@ ui_print("- Let's format system...");
 format("MTD", "system");
 ui_print("- Now mount the system...");
 mount("MTD", "system", "/system");
-ui_print("- It's time to extract System essential things...");
+ui_print("- It's time to extract essential system files...");
 package_extract_dir("system", "/system");
 set_progress(0.7);
 ui_print("Let us do some symlink stuff");
@@ -898,28 +898,28 @@ if
 if
 		file_getprop("/tmp/aroma-data/gapps.prop","selected.0") == "2"
 	then
-	ui_print("- You haven't choosen minimal GApps package, doing nothing...");
+	ui_print("- Not flashing GAPPs...");
 	endif;
 
 #Memory extansion
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "1"
 	then
-	ui_print("- Flashing  Link2sd...");
+	ui_print("- Flashing  Link2SD...");
 		package_extract_dir("memory/Link2sd", "/system/app");
 	endif;
 	
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "2"
 	then
-	ui_print("- Flashing  Int2ext+...");
+	ui_print("- Flashing  INT2EXT+...");
 		package_extract_dir("memory/Int2ext+", "/system/etc/init.d");
 	endif;
 	
 if
 		file_getprop("/tmp/aroma-data/memory.prop","selected.0") == "3"
 	then
-	ui_print("- Flashing  Int2ext...");
+	ui_print("- Flashing  INT2EXT...");
 		package_extract_dir("memory/Int2ext", "/system/etc/init.d");
 	endif;	
 
