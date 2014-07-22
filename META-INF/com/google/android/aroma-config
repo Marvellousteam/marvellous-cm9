@@ -1,10 +1,10 @@
 ﻿# Aroma-config
 
-ini_set("rom_name",             "marvellous-cm9");
+ini_set("rom_name",             "Marvellous CM9");
 ini_set("rom_version",          "v0.1 - alpha");
-ini_set("rom_author",           "Kevinjoa");
+ini_set("rom_author",           "Team Simplicit");
 ini_set("rom_device",           "HTC Wildfire S");
-ini_set("rom_date",             "July, 21th, 2014");
+ini_set("rom_date",             "July 2014");
 
 ini_set("text_ok", "OK");
 ini_set("text_next", "Next >");
@@ -13,7 +13,7 @@ ini_set("text_yes", "Yes");
 ini_set("text_no", "No");
 ini_set("text_about", "About");
 ini_set("text_quit", "Quit Installation");
-ini_set("text_quit_msg", "Really Quit the installation?");
+ini_set("text_quit_msg", "Are you sure to quit the installation?");
 
 splash(5000, "splash");
 
@@ -22,25 +22,25 @@ fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansF
 theme("ics");
 
 viewbox(
-	"Marvellous CM 9 ",
+	"Marvellous CM9 ",
 	"\n\n\n\n\n\n\n\n\n\n"+
 	"<#0000ff>Welcome!</#>\n\n\n\n"+
-	"You are about to flash Marvellous CM 9 rom.\n\n"+
-	"<b>Build: v0.1 -alpha</b>\n"+
-	"<b>Date: July, 21th, 2014</b>\n\n"+
-	"Please click next to go on."+
+	"You are about to flash \t\t\t <#selectbg_g>"+ini_get("rom_name")+"</#>\n"+
+	"<b>Version:</b>\t\t\t <#selectbg_g>"+ini_get("rom_version")+"</#>\n"+
+	"<b>Date:</b>\t\t <#selectbg_g>"+ini_get("rom_date")+"</#>\n\n\n"+
+	"Please click next to continue."+
 	"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+
-	"by Kevinjoa",
+	"by Team Simplicit",
 	"icons/sensian"
 );
 	
 agreebox(
 	"Infos",
-	"Please read the informations before flashing:",
+	"",
 	"icons/alert",
 	readfile_aroma("informations.txt"),
 	"I've read the information.",
-	"Please read the informations before flashing!"
+	"Please read carefully."
 );
 
 selectbox(
@@ -143,22 +143,22 @@ selectbox(
 
 selectbox(
    "GApps",
-   "Do you want to have minimalistic GApps ?",
+   "Do you want to have minimalistic GAPPs?",
    "icons/apps",
    "gapps.prop",
-   "Yes.",                          "I want to install minimastic gapps package with this rom",                        1,
-   "No.",                            "I don't want use minimalistic gapps package with this rom ",                      0
+   "Yes.",                          "I want to install minimalistic GAPPs!",                        1,
+   "No.",                            "I don't need them.",                      0
 );  
 
 selectbox(
    "Memory twekas",
-   "Which tweak do you want to use ?",
+   "Which tweak do you want to use?",
    "icons/apps",
    "memory.prop",
-   "Link2sd.",                      "Link2sd: Must be activated in system to work",                                    0,
-   "Int2ext+",                      "A background Script like Data2sd, fast but needs some space ",                    0,
+   "Link2sd.",                      "Link2SD: Must be activated in order to work to work",                                    0,
+   "Int2ext+",                      "A script like Data2sd - fast but needs some space",                    0,
    "Int2ext",                       "Just like Data2sd",                                                               0,
-   "None",                          "You don't want to have any of those tweaks, than click this.",                    1
+   "None",                          "You don't want to have any of those tweaks, then click this.",                    1
 );   
      
    
@@ -170,7 +170,7 @@ viewbox(
 	"<#ff0000>Last Warning!</#>",
 	"\n\n\n\n\n"+
 	"by pressing install rom will be installed.\n\n\n"+
-	"To quit, please press Search-Key\n"+
+	"To quit, please press search key\n"+
 	"and choose quit installation.\n\n"+
 	"If you want to check your settings please press\n"+
 	"please check.",
@@ -181,8 +181,8 @@ ini_set("text_next", "OK");
 
 install(
 	"Installing...",
-	"Marvellous CM9 Rom will be installed now.\n"+
-	"Please wait until the rom installation is finished.",
+	"Marvellous CM9 Rom is being installed.\n"+
+	"Please wait until the rom installation has finished.",
 	"icons/install"
 );
 
@@ -193,7 +193,7 @@ viewbox(
 	"It's DONE !!",
 	"\n\n\n\n\n\n\n"+
 	"The Marvellous Marvellous CM9-ROM is sucssesfully flashed.\n\n"+
-	"First boot can take a while ,so please wait.\n\n"+
+	"First boot can take a while, so please wait.\n\n"+
 	"Enjoy your customized phone!",
 	"icons/install"
 );
